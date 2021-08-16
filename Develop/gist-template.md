@@ -24,9 +24,10 @@ Briefly summarize the regex you will be describing and what you will explain. In
 
 ### Anchors
 Anchors reture a true or false value at the beginning or end of the input.
-
+```
 let str1 = "Mary had a little lamb";
 alert( /^Mary/.test(str1) ); // true
+```
 
 ### Quantifiers
 Queantifiers return a true or false value if the number instances within an input are found. 
@@ -34,9 +35,28 @@ Queantifiers return a true or false value if the number instances within an inpu
 ```alert( "I'm 12345 years old".match(/\d{5}/) ); //  "12345"```
 
 ### OR Operator
+Or Operator are denoted by the | character instead of being put in an array. 
+
+```
+let regexp = /html|php|css|java(script)?/gi;
+
+let str = "First HTML appeared, then CSS, then JavaScript";
+
+alert( str.match(regexp) ); // 'HTML', 'CSS', 'JavaScript'
+```
 
 ### Character Classes
+Character Classes are used to filter and return search value.
+'''
+let str = "+7(903)-123-45-67";
 
+let regexp = /\d/g;
+
+alert( str.match(regexp) ); // array of matches: 7,9,0,3,1,2,3,4,5,6,7
+
+// let's make the digits-only phone number of them:
+alert( str.match(regexp).join('') ); // 79031234567
+'''
 ### Flags
 
 ### Grouping and Capturing
