@@ -23,8 +23,15 @@ Briefly summarize the regex you will be describing and what you will explain. In
 ## Regex Components
 
 ### Anchors
+Anchors reture a true or false value at the beginning or end of the input.
+
+let str1 = "Mary had a little lamb";
+alert( /^Mary/.test(str1) ); // true
 
 ### Quantifiers
+Queantifiers return a true or false value if the number instances within an input are found. 
+
+```alert( "I'm 12345 years old".match(/\d{5}/) ); //  "12345"```
 
 ### OR Operator
 
